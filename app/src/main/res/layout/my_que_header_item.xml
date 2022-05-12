@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/_60sdp"
+    android:layout_margin="@dimen/_8sdp"
+    android:background="@color/testque"
+    android:gravity="center"
+    android:layout_height="@dimen/_60sdp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2012"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20ssp"
+        android:id="@+id/ques_no"/>
+</LinearLayout>

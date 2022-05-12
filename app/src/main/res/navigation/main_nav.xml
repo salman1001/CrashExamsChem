@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.crashExams365.chemistry.Fragments.Launch.LaunchFragment"
+        android:label="launch_fragment"
+        tools:layout="@layout/launch_fragment" >
+        <action
+            android:id="@+id/action_launchFragment_to_chapterFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/chapterFragment" />
+        <action
+            android:id="@+id/action_launchFragment_to_testFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/testFragment" />
+        <action
+            android:id="@+id/action_launchFragment_to_requestFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+
+            app:destination="@id/requestFragment" />
+        <action
+            android:id="@+id/action_launchFragment_to_notificationFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_launchFragment_to_topicsInChap"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/topicsInChap" />
+        <action
+            android:id="@+id/action_launchFragment_to_testYearRep"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/testYearRep" />
+        <action
+            android:id="@+id/action_launchFragment_to_doubtsFragment"
+            app:destination="@id/doubtsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chapterFragment"
+        android:name="com.crashExams365.chemistry.Fragments.Chapters.ChapterFragment"
+        android:label="chapter_fragment"
+        tools:layout="@layout/chapter_fragment" >
+        <action
+            android:id="@+id/action_chapterFragment_to_topicsInChap"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/topicsInChap" />
+    </fragment>
+    <fragment
+        android:id="@+id/topicsInChap"
+        android:name="com.crashExams365.chemistry.Fragments.TopicsInChap.TopicsInChap"
+        android:label="topics_in_chap_fragment"
+        tools:layout="@layout/topics_in_chap_fragment" >
+        <argument
+            android:name="chapterslected"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_topicsInChap_to_pdfViewer"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/pdfViewer" />
+        <action
+            android:id="@+id/action_topicsInChap_to_indexFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/indexFragment" />
+        <action
+            android:id="@+id/action_topicsInChap_to_testNumbers"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/testNumbers" />
+        <argument
+            android:name="tyoe"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_topicsInChap_to_documentViewer"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/documentViewer" />
+    </fragment>
+    <fragment
+        android:id="@+id/pdfViewer"
+        android:name="com.crashExams365.chemistry.Fragments.PdfViewer.PdfViewer"
+        android:label="pdf_viewer_fragment"
+        tools:layout="@layout/pdf_viewer_fragment" >
+        <argument
+            android:name="pdftype"
+            app:argType="string" />
+        <argument
+            android:name="chapterseleetd"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.crashExams365.chemistry.Fragments.Test.TestFragment"
+        android:label="test_fragment"
+        tools:layout="@layout/test_fragment" >
+        <argument
+            android:name="testType"
+            app:argType="string" />
+        <argument
+            android:name="chaptername"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_testFragment_to_resultFragments"
+            app:popUpTo="@id/testNumbers"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="true"
+            app:destination="@id/resultFragments" />
+        <argument
+            android:name="testno"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/indexFragment"
+        android:name="com.crashExams365.chemistry.Fragments.IndexFragment.IndexFragment"
+        android:label="index_fragment"
+        tools:layout="@layout/index_fragment" >
+        <argument
+            android:name="chapterselectd"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragments"
+        android:name="com.crashExams365.chemistry.Fragments.ResultFragment.ResultFragments"
+        android:label="result_fragments_fragment"
+        tools:layout="@layout/result_fragments_fragment" >
+        <argument
+            android:name="Obj"
+            app:argType="com.crashExams365.chemistry.Fragments.Test.PassObj" />
+        <action
+            android:id="@+id/action_resultFragments_to_showAnswers"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/showAnswers" />
+        <action
+            android:id="@+id/action_resultFragments_to_topicsInChap2"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/topicsInChap" />
+    </fragment>
+    <fragment
+        android:id="@+id/showAnswers"
+        android:name="com.crashExams365.chemistry.Fragments.ShowAnswers.ShowAnswers"
+        android:label="show_answers_fragment"
+        tools:layout="@layout/show_answers_fragment" >
+        <argument
+            android:name="objectShowAns"
+            app:argType="com.crashExams365.chemistry.Fragments.ResultFragment.ObjectShowAns" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestFragment"
+        android:name="com.crashExams365.chemistry.Fragments.Request.RequestFragment"
+        android:label="request_fragment"
+        tools:layout="@layout/request_fragment" >
+        <action
+
+            android:id="@+id/action_requestFragment_to_launchFragment"
+            app:popUpTo="@id/launchFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="true"
+            app:destination="@id/launchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.crashExams365.chemistry.Fragments.Notification.NotificationFragment"
+        android:label="notification_fragment"
+        tools:layout="@layout/notification_fragment" />
+    <fragment
+        android:id="@+id/testNumbers"
+        android:name="com.crashExams365.chemistry.Fragments.TestNumbers.TestNumbers"
+        android:label="test_numbers_fragment"
+        tools:layout="@layout/test_numbers_fragment" >
+        <argument
+            android:name="nameOfChap"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_testNumbers_to_testFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/testFragment" />
+        <argument
+            android:name="testtype"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_testNumbers_to_resultFragments"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/testNumbers"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/resultFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/testYearRep"
+        android:name="com.crashExams365.chemistry.Fragments.TestYearRep.TestYearRep"
+        android:label="test_year_rep_fragment"
+        tools:layout="@layout/test_year_rep_fragment" >
+        <action
+            android:id="@+id/action_testYearRep_to_topicsInChap"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/topicsInChap" />
+        <argument
+            android:name="ifany"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_testYearRep_to_documentViewer"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:destination="@id/documentViewer" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentViewer"
+        android:name="com.crashExams365.chemistry.Fragments.DocumentViewer.DocumentViewer"
+        android:label="document_viewer_fragment"
+        tools:layout="@layout/document_viewer_fragment" >
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/doubtsFragment"
+        android:name="com.crashExams365.chemistry.Fragments.Doubts.DoubtsFragment"
+        android:label="doubts_fragment"
+        tools:layout="@layout/doubts_fragment" >
+        <action
+            android:id="@+id/action_doubtsFragment_to_askNewDoubtsFragment"
+            app:destination="@id/askNewDoubtsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/askNewDoubtsFragment"
+        android:name="com.crashExams365.chemistry.Fragments.AskNewDoubts.AskNewDoubtsFragment"
+        android:label="ask_new_doubts_fragment"
+        tools:layout="@layout/ask_new_doubts_fragment" />
+</navigation>

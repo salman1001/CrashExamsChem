@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_4sdp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="@dimen/_50sdp"
+
+        android:background="@color/pri"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:paddingTop="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:text="1"
+            android:maxLines="1"
+            android:textSize="@dimen/_14ssp"
+
+            android:id="@+id/rank_no"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="3"
+            android:fontFamily="@font/ubuntu_medium"
+            android:paddingTop="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:text="Mohammad Salman"
+            android:maxLines="1"
+
+            android:textSize="@dimen/_14ssp"
+
+
+            android:id="@+id/rank_holder_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:paddingTop="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:text="65"
+            android:maxLines="1"
+            android:textSize="@dimen/_14ssp"
+            android:id="@+id/marks_otained_holer"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

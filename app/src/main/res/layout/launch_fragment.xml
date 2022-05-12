@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FBFBFB"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLay"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Launch.LaunchFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:fontFamily="@font/ubuntu_bold"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+            android:background="?attr/colorPrimary">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:trackColor="@color/pri"
+                android:id="@+id/prolaunch"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/holder"
+                android:layout_marginEnd="20dp"
+                android:visibility="invisible"
+                android:layout_height="250dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Announcements"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/round_corner_top"
+                    android:layout_height="match_parent">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/image_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:sliderAnimationDuration="1300"
+                        app:sliderIndicatorEnabled="false"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderScrollTimeInSec="3"
+                        app:sliderStartAutoCycle="true"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/view"
+                android:visibility="invisible"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintTop_toBottomOf="@id/holder"
+                android:layout_marginTop="20dp"
+                android:background="#BAB7B7"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/rec_cat"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/header"
+        app:itemIconTint="@color/statusbar"
+
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start"/>
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

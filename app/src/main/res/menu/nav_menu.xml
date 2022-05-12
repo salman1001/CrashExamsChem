@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_chapters"
+        android:title="Chapters"
+        android:icon="@drawable/suand"/>
+
+    <item android:id="@+id/nav_tests"
+        android:title="Tests"
+        android:icon="@drawable/testyuyu"/>
+
+    <item android:id="@+id/nav_prev"
+    android:title="Previous Year"
+    android:icon="@drawable/previous"/>
+
+    <item android:id="@+id/nav_hcverma"
+        android:title="Hc Verma Solutions"
+        android:icon="@drawable/book11111111111"/>
+
+
+    <item android:id="@+id/nav_dc"
+        android:title="Dc Pandey"
+        android:icon="@drawable/book222222222222"/>
+    <item android:id="@+id/nav_iro"
+        android:title="IE Irodov "
+        android:icon="@drawable/book33333333333333"/>
+
+
+    <item android:id="@+id/nav_req"
+        android:title="Request New Item"
+        android:icon="@drawable/requesttt22222"/>
+    <item android:id="@+id/nav_jeenoti"
+        android:title="Jee Notification"
+        android:icon="@drawable/notification7878787"/>
+    <item android:id="@+id/nav_cutoff"
+        android:title="Cutoffs"
+        android:icon="@drawable/cutoff56565656"/>
+    <item android:id="@+id/nav_rate"
+        android:title="Rate"
+        android:icon="@drawable/rate434255"/>
+    <item android:id="@+id/nav_share"
+        android:title="Share"
+        android:icon="@drawable/shareree34344"/>
+
+
+
+</menu>

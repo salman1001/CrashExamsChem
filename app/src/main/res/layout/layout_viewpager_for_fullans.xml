@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical">
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+
+                android:src="@drawable/uiui"
+                android:scaleType="fitXY"
+                android:paddingTop="@dimen/_9sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/photo_question"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:orientation="vertical"
+                android:background="#B8B8BA"
+                android:layout_weight="4"
+                android:weightSum="4"
+
+                android:layout_height="0dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="A"
+                    android:layout_weight="1"
+
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+
+                    android:background="@color/white"
+                    android:paddingStart="@dimen/_9sdp"
+
+                    android:id="@+id/fullA"
+
+                    android:gravity="start|center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="B"
+                    android:layout_weight="1"
+
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:id="@+id/fullB"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:layout_marginEnd="@dimen/_5sdp"
+
+
+                    android:paddingStart="@dimen/_9sdp"
+                    android:background="@color/white"
+
+                    android:gravity="start|center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="C"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:layout_weight="1"
+
+                    android:id="@+id/fullC"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+
+
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:background="@color/white"
+
+                    android:gravity="start|center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="D"
+                    android:layout_marginBottom="@dimen/_9sdp"
+                    android:id="@+id/fullD"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:layout_weight="1"
+
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:background="@color/white"
+
+
+                    android:gravity="start|center"/>
+
+
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Show Answer"
+                android:backgroundTint="@color/pri"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:id="@+id/showclicked"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/activity_register_with_name.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/ask_new_doubts_fragment.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/document_viewer_fragment.xml" value="0.21302083333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/doubts_fragment.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/rank_result_dash.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/request_fragment.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/menu/nav_menu.xml" value="0.146875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

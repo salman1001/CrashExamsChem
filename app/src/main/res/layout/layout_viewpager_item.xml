@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="2.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/clicknext">
+        <com.github.chrisbanes.photoview.PhotoView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:paddingTop="@dimen/_9sdp"
+
+            android:layout_weight="1.4"
+            android:src="@drawable/uiui"
+            android:id="@+id/photo_question"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#B8B8BA"
+
+            android:orientation="vertical"
+            android:layout_weight="1.1"
+            android:id="@+id/myoption">
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_4sdp"
+                android:orientation="vertical"
+                android:weightSum="4"
+                android:layout_height="match_parent"
+                app:singleSelection="true">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+
+                    android:layout_weight="1"
+                    android:text="A"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"
+                    android:gravity="start|center"
+                    android:id="@+id/opt_A"
+                    android:layout_height="0dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"
+
+                    android:text="B"
+                    android:gravity="start|center"
+                    android:id="@+id/opt_B"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+
+                    android:layout_height="0dp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"
+
+                    android:layout_weight="1"
+                    android:text="C"
+                    android:gravity="start|center"
+                    android:id="@+id/opt_C"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="@color/black"
+
+                    android:backgroundTint="@color/white"
+                    android:layout_weight="1"
+                    android:text="D"
+                    android:gravity="start|center"
+                    android:id="@+id/opt_D"/>
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+
+        </LinearLayout>
+        
+        
+        
+        
+        
+    </LinearLayout>
+ 
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/clicknext"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_height="wrap_content"
+            android:text="Prev"
+            android:tag="PRE"
+            android:layout_marginEnd="@dimen/_8sdp"
+
+            android:layout_weight="1"
+            android:id="@+id/prev"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rev"
+            android:tag="REW"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:id="@+id/review"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="Next"
+            android:tag="NEX"
+            android:layout_weight="1" android:id="@+id/next"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
