@@ -17,6 +17,7 @@ class NotificationViewModel(application: Application) : AndroidViewModel(applica
     private var messageError: MutableLiveData<String> = MutableLiveData()
     private val iNoticeLoad: INotifLoadSuccess
 
+
     init {
         iNoticeLoad=this
     }

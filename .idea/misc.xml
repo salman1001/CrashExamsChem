@@ -3,12 +3,44 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/activity_main.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/activity_register_with_name.xml" value="0.378125" />
         <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/ask_new_doubts_fragment.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/chapter_fragment.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/cutom_toast.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/dialog_page.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/document_viewer_fragment.xml" value="0.21302083333333333" />
         <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/doubts_fragment.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/header.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/index_fragment.xml" value="0.3776041666666667" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/item_for_cat.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/item_for_chapters.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/launch_fragment.xml" value="0.3776041666666667" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/layout_for_header_item.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/layout_pre_year.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/layout_sign_in.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/layout_viewpager_for_fullans.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/layout_viewpager_item.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/message_item.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/my_que_header_item.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/notification.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/notification_fragment.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/notifiction_item.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/pdf_viewer_fragment.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/pdfheader.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/popup_dialog.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/que_ans_item.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/rank_of_users_in_list.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/rank_result_dash.xml" value="0.378125" />
         <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/request_fragment.xml" value="0.378125" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/result_fragments_fragment.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/show_answers_fragment.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/sliderlay.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/test_fragment.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/test_numbers_fragment.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/test_year_rep_fragment.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/testheader.xml" value="0.2598958333333333" />
+        <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/layout/topics_in_chap_fragment.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/salma/AndroidStudioProjects/Chemistry/app/src/main/res/menu/nav_menu.xml" value="0.146875" />
       </map>
     </option>

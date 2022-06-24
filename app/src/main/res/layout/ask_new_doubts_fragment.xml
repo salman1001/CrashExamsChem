@@ -1,59 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+
     tools:context=".Fragments.AskNewDoubts.AskNewDoubtsFragment">
+
+
     <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/myasking"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="5"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:padding="@dimen/_14sdp"
+        android:layout_height="0dp"
+        android:background="@color/crad_bakk"
+        android:orientation="vertical"
+        android:id="@+id/myll"
 
-        android:orientation="vertical">
-        <TextView
+
+        android:weightSum="5">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ask Your Question Mate"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_20ssp"
-            android:fontFamily="@font/ubuntu_bold"/>
-        <ImageView
+            android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_height="0dp"
-            android:id="@+id/getimage"
             android:layout_weight="3"
-            android:src="@drawable/splook"
-            android:scaleType="fitXY"/>
+
+            android:background="#DAD6D6"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_height="0dp">
 
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:background="#D1CCCC"
-
-            android:layout_marginTop="@dimen/_30sdp"
-            android:layout_height="wrap_content"
-
-            android:layout_marginRight="@dimen/_3sdp">
-            <com.google.android.material.textfield.TextInputEditText
+            <ImageView
+                android:id="@+id/getimage"
+                android:layout_margin="@dimen/_10sdp"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-                android:layout_height="wrap_content"
-                android:inputType="textImeMultiLine"
 
-                android:id="@+id/optionText"
-                android:hint="Optional Information............"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:scaleType="fitXY"
+                android:src="@drawable/myplus" />
+
+        </LinearLayout>
+
+                <LinearLayout
+            android:layout_width="match_parent"
+                    android:layout_weight="2"
+
+
+            android:background="#D3CFCF"
+            android:layout_marginBottom="@dimen/_5sdp"
+
+            android:layout_height="0dp">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Add Optional Information Here...."
+                        android:textColor="@color/black"
+                        android:gravity="start"
+                        android:background="#D3CFCF"
+                        android:textColorHint="#090909"
+                        android:lineSpacingExtra="@dimen/_6sdp"
+
+                        android:textSize="@dimen/_16ssp"
+                        android:id="@+id/optionText"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:layout_margin="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+
+<!--            -->
+<!--            android:layout_marginRight="@dimen/_3sdp">-->
+
+<!--&lt;!&ndash;            <com.google.android.material.textfield.TextInputEditText&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/optionText"&ndash;&gt;-->
+
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                &ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;                android:hint="Mention Something if it's Necessary"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:inputType="text"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        </com.google.android.material.textfield.TextInputLayout>&ndash;&gt;-->
 
     </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myll"
+        android:id="@+id/myasking"
+        android:background="@color/white"
 
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
@@ -89,4 +142,4 @@
 
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

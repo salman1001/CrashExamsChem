@@ -283,7 +283,15 @@
     </fragment>
     <fragment
         android:id="@+id/askNewDoubtsFragment"
+
         android:name="com.crashExams365.chemistry.Fragments.AskNewDoubts.AskNewDoubtsFragment"
         android:label="ask_new_doubts_fragment"
-        tools:layout="@layout/ask_new_doubts_fragment" />
+
+        tools:layout="@layout/ask_new_doubts_fragment" >
+        <action
+            android:id="@+id/action_askNewDoubtsFragment_to_doubtsFragment"
+            app:popUpTo="@id/askNewDoubtsFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/doubtsFragment" />
+    </fragment>
 </navigation>

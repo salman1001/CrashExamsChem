@@ -65,7 +65,7 @@ class LaunchFragment : Fragment(R.layout.launch_fragment) {
     var layoutAnimationController: LayoutAnimationController?=null
     var versionFromBack:String?=null
 
-    private var mInterstitialAd: InterstitialAd? = null
+  //  private var mInterstitialAd: InterstitialAd? = null
 
 
 
@@ -85,33 +85,33 @@ class LaunchFragment : Fragment(R.layout.launch_fragment) {
     ): View? {
         launchViewModel=ViewModelProvider(this).get(LaunchViewModel::class.java)
         _binding = LaunchFragmentBinding.inflate(inflater, container, false)
-        var adRequest = AdRequest.Builder().build()
+    //    var adRequest = AdRequest.Builder().build()
 
-        InterstitialAd.load(requireContext(),"ca-app-pub-3543422873793913/7241678119", adRequest, object : InterstitialAdLoadCallback() {
-            override fun onAdFailedToLoad(adError: LoadAdError) {
-                Log.d(TAG, adError?.message)
-                mInterstitialAd = null
-            }
-
-            override fun onAdLoaded(interstitialAd: InterstitialAd) {
-                mInterstitialAd = interstitialAd
-            }
-        })
-
-        mInterstitialAd?.fullScreenContentCallback = object: FullScreenContentCallback() {
-            override fun onAdDismissedFullScreenContent() {
-              //  Log.d(TAG, 'Ad was dismissed.')
-            }
-
-            override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
-            //    Log.d(TAG, 'Ad failed to show.')
-            }
-
-            override fun onAdShowedFullScreenContent() {
-            //    Log.d(TAG, 'Ad showed fullscreen content.')
-                mInterstitialAd = null
-            }
-        }
+//        InterstitialAd.load(requireContext(),"", adRequest, object : InterstitialAdLoadCallback() {
+//            override fun onAdFailedToLoad(adError: LoadAdError) {
+//                Log.d(TAG, adError?.message)
+//                mInterstitialAd = null
+//            }
+//
+//            override fun onAdLoaded(interstitialAd: InterstitialAd) {
+//                mInterstitialAd = interstitialAd
+//            }
+//        })
+//
+//        mInterstitialAd?.fullScreenContentCallback = object: FullScreenContentCallback() {
+//            override fun onAdDismissedFullScreenContent() {
+//              //  Log.d(TAG, 'Ad was dismissed.')
+//            }
+//
+//            override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
+//            //    Log.d(TAG, 'Ad failed to show.')
+//            }
+//
+//            override fun onAdShowedFullScreenContent() {
+//            //    Log.d(TAG, 'Ad showed fullscreen content.')
+//                mInterstitialAd = null
+//            }
+//        }
 
         return binding.root
     }
@@ -228,9 +228,9 @@ class LaunchFragment : Fragment(R.layout.launch_fragment) {
             toggle.syncState()
             binding.navView!!.setNavigationItemSelectedListener {
                 if (versionFromBack==versionno){
-                    if (mInterstitialAd != null) {
-                        mInterstitialAd?.show(requireActivity())
-                    }
+//                    if (mInterstitialAd != null) {
+//                        mInterstitialAd?.show(requireActivity())
+//                    }
 
                     when (it.itemId) {
 
@@ -408,9 +408,9 @@ class LaunchFragment : Fragment(R.layout.launch_fragment) {
         if (event.issuccess) {
 
 
-            if (mInterstitialAd != null) {
-                mInterstitialAd?.show(requireActivity())
-            }
+//            if (mInterstitialAd != null) {
+//                mInterstitialAd?.show(requireActivity())
+//            }
 
 
 

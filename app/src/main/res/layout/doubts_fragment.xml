@@ -3,31 +3,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.Doubts.DoubtsFragment">
-    <LinearLayout
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="vertical">-->
+<!--&lt;!&ndash;        <com.google.android.material.button.MaterialButton&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="@dimen/_20sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginStart="@dimen/_8sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/newDoubts"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:backgroundTint="#AC8B4B"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Ask New Doubts"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_gravity="center"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <com.google.android.material.button.MaterialButton&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="@dimen/_20sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/seeDoubtsAns"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginStart="@dimen/_8sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:backgroundTint="#55AC4B"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="See Your Answers"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_gravity="center"/>&ndash;&gt;-->
+<!--        -->
+<!--        -->
+<!--    </LinearLayout>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-        <com.google.android.material.button.MaterialButton
+        android:layout_height="match_parent">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:id="@+id/newDoubts"
-            android:backgroundTint="#AC8B4B"
-            android:text="Ask New Doubts"
-            android:layout_gravity="center"/>
-        <com.google.android.material.button.MaterialButton
+            android:text="No Question Asked Yet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/display_message"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_4sdp"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:background="?attr/colorPrimary"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:paddingTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:id="@+id/rec_queAndAns"/>
+
+
+
+        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:id="@+id/seeDoubtsAns"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:backgroundTint="#55AC4B"
-            android:text="See Your Answers"
-            android:layout_gravity="center"/>
-    </LinearLayout>
+            android:clickable="true"
+            android:backgroundTint="@color/lightblue"
+
+            android:src="@drawable/kinetic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 </FrameLayout>

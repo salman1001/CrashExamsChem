@@ -1,8 +1,11 @@
 package com.crashExams365.chemistry.Fragments.AskNewDoubts
 
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.ContentValues.TAG
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import androidx.lifecycle.ViewModelProvider
@@ -12,10 +15,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.NonNull
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import com.crashExams365.chemistry.Fragments.Doubts.DoubtsViewModel
@@ -26,15 +33,133 @@ import com.crashExams365.chemistry.databinding.AskNewDoubtsFragmentBinding
 import com.crashExams365.chemistry.databinding.DoubtsFragmentBinding
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.android.gms.auth.api.signin.internal.Storage
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.OnSuccessListener
+import com.google.android.gms.tasks.Task
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.UploadTask
 import java.io.File
 import java.util.*
 
 class AskNewDoubtsFragment : Fragment() {
+
+    private val ImageList: ArrayList<Uri> = ArrayList<Uri>()
+    private var uploads = 0
+    private var databaseReference: DatabaseReference? = null
+    private var progressDialog: ProgressDialog? = null
+    var index = 0
+    var textView: TextView? = null
+    var choose: Button? = null
+    var send: Button? = null
+  //  protected fun onCreate(savedInstanceState: Bundle?) {
+   //     super.onCreate(savedInstanceState)
+  //      setContentView(R.layout.activity_main)
+       // databaseReference = FirebaseDatabase.getInstance().getReference().child("User_one")
+   //     progressDialog = ProgressDialog(this)
+   //     progressDialog.setMessage("Uploading ..........")
+   //     textView = findViewById(R.id.text)
+   //     choose = findViewById(R.id.choose)
+   //     send = findViewById(R.id.upload)
+  //  }
+
+//    fun choose(view: View?) {
+//        //we will pick images
+//        val intent = Intent(Intent.ACTION_GET_CONTENT)
+//        intent.setType("image/*")
+//        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+//        startActivityForResult(intent, PICK_IMG)
+//    }
+
+   // @SuppressLint("SetTextI18n")
+//    protected fun onActivityResult(requestCode: Int, resultCode: Int, @Nullable data: Intent) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        if (requestCode == PICK_IMG) {
+//            if (resultCode == RESULT_OK) {
+//                if (data.getClipData() != null) {
+//                    val count: Int = data.getClipData().getItemCount()
+//                    var CurrentImageSelect = 0
+//                    while (CurrentImageSelect < count) {
+//                        val imageuri: Uri =
+//                            data.getClipData().getItemAt(CurrentImageSelect).getUri()
+//                        ImageList.add(imageuri)
+//                        CurrentImageSelect = CurrentImageSelect + 1
+//                    }
+//                    textView.setVisibility(View.VISIBLE)
+//                    textView.setText(
+//                        "You Have Selected " + ImageList.size().toString() + " Pictures"
+//                    )
+//                    choose.setVisibility(View.GONE)
+//                }
+//            }
+//        }
+//    }
+
+   // @SuppressLint("SetTextI18n")
+//    fun upload(view: View?) {
+//     //   textView.setText("Please Wait ... If Uploading takes Too much time please the button again ")
+//       // progressDialog.show()
+//        val ImageFolder: StorageReference =
+//            FirebaseStorage.getInstance().getReference().child("ImageFolder")
+//        uploads = 0
+//        while (uploads < ImageList.size()) {
+//            val Image: Uri = ImageList[uploads]
+//            val imagename: StorageReference =
+//                ImageFolder.child("image/" + Image.getLastPathSegment())
+//            imagename.putFile(ImageList[uploads])
+//                .addOnSuccessListener(object : OnSuccessListener<UploadTask.TaskSnapshot?>() {
+//                    fun onSuccess(taskSnapshot: UploadTask.TaskSnapshot?) {
+//                        imagename.getDownloadUrl()
+//                            .addOnSuccessListener(object : OnSuccessListener<Uri?>() {
+//                                fun onSuccess(uri: Uri?) {
+//                                    val url: String = java.lang.String.valueOf(uri)
+//                                    SendLink(url)
+//                                }
+//                            })
+//                    }
+//                })
+//            uploads++
+//        }
+//    }
+
+//    private fun SendLink(url: String) {
+//        val hashMap: HashMap<String, String> = HashMap()
+//        hashMap["link"] = url
+//        databaseReference.push().setValue(hashMap)
+//            .addOnCompleteListener(object : OnCompleteListener<Void?>() {
+//                fun onComplete(@NonNull task: Task<Void?>?) {
+//                    progressDialog.dismiss()
+//                    textView.setText("Image Uploaded Successfully")
+//                    send.setVisibility(View.GONE)
+//                    ImageList.clear()
+//                }
+//            })
+//    }
+
+    companion object {
+        private const val PICK_IMG = 1
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     lateinit var uri:Uri
 
 
@@ -55,6 +180,16 @@ class AskNewDoubtsFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (activity is AppCompatActivity) {
+            (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
+            (activity as AppCompatActivity).supportActionBar?.title = "Ask Your Question"
+            (activity as AppCompatActivity).supportActionBar?.setBackgroundDrawable(
+                ColorDrawable(
+                    Color.parseColor("#486BD3")
+                )
+            )
+        }
+
 
 
         binding.buttonsubmit.setOnClickListener{
@@ -62,18 +197,14 @@ class AskNewDoubtsFragment : Fragment() {
             binding.prosub.visibility=View.VISIBLE
 
 
+
+
             val storageRef = FirebaseStorage.getInstance().getReference()
 
-// Create a reference to "mountains.jpg"
-       //     val mountainsRef = storageRef.child("mountains.jpg")
-
-// Create a reference to 'images/mountains.jpg'
-        //    val mountainImagesRef = storageRef.child("images/mountains.jpg")
 
 
 
 
-       //     var file = Uri.fromFile(File("path/to/images/rivers.jpg"))
             val riversRef = storageRef.child("Question").child(FirebaseAuth.getInstance().currentUser!!.uid).child("${uri.lastPathSegment}")
 
 
