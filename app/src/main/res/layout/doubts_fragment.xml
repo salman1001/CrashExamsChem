@@ -33,10 +33,13 @@
 <!--    </LinearLayout>-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="#DFDADA"
+
         android:layout_height="match_parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="No Question Asked Yet"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -80,11 +83,27 @@
             android:layout_marginEnd="@dimen/_20sdp"
             android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:backgroundTint="@color/lightblue"
+            android:backgroundTint="#8DA86E"
 
-            android:src="@drawable/kinetic" />
+            android:src="@drawable/addimageioiio" />
+
+
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:trackColor="@color/pri"
+            android:id="@+id/prodoubts"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

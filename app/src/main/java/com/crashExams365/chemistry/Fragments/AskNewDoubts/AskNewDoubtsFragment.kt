@@ -25,6 +25,8 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import com.crashExams365.chemistry.Fragments.Doubts.DoubtsFragmentDirections
 import com.crashExams365.chemistry.Fragments.Doubts.DoubtsViewModel
 import com.crashExams365.chemistry.MainActivity
 import com.crashExams365.chemistry.R
@@ -180,6 +182,8 @@ class AskNewDoubtsFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
+
         if (activity is AppCompatActivity) {
             (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
             (activity as AppCompatActivity).supportActionBar?.title = "Ask Your Question"
@@ -241,7 +245,10 @@ class AskNewDoubtsFragment : Fragment() {
                             Toast.makeText(requireContext(),"Done Mate",Toast.LENGTH_LONG).show()
                             binding.prosub.visibility=View.GONE
 
-                            requireActivity().onBackPressed()
+                         //   requireActivity().onBackPressed()
+                            val action = AskNewDoubtsFragmentDirections.actionAskNewDoubtsFragmentToDoubtsFragment()
+                            navController!!.navigate(action)
+
 
 
                         }
@@ -282,7 +289,7 @@ class AskNewDoubtsFragment : Fragment() {
 
 
         }
-        binding.getimage.setOnClickListener{
+        binding.pickIMAGE.setOnClickListener{
 
             ImagePicker.with(this)
                    .crop()      //Final image size will be less than 1 MB(Optional)
@@ -327,7 +334,7 @@ class AskNewDoubtsFragment : Fragment() {
                 val fileUri = data?.data!!
 
              //   mProfileUri = fileUri
-                binding.getimage.setImageURI(fileUri)
+                binding.pickIMAGE.setImageURI(fileUri)
                 uri=fileUri
             } else if (resultCode == ImagePicker.RESULT_ERROR) {
                // Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()

@@ -10,9 +10,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.crashExams365.chemistry.Fragments.Chapters.ChapterCliked
 import com.crashExams365.chemistry.Fragments.Notification.MessageClass
 import com.crashExams365.chemistry.R
+import com.crashExams365.chemistry.common.IRecListener
 import com.google.android.material.card.MaterialCardView
+import org.greenrobot.eventbus.EventBus
 
 class MyQueAndAns(var context: Context, var messageList:List<QuestionAndAns>):
     RecyclerView.Adapter<MyQueAndAns.MyViewHolder>() {
@@ -26,10 +29,14 @@ class MyQueAndAns(var context: Context, var messageList:List<QuestionAndAns>):
 
     }
 
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
         var date: ImageView? = null
         var imageView:ImageView?=null
+        private var listener: IRecListener? = null
+        fun setListener(listener: IRecListener) {
+            this.listener = listener
+        }
 
 
 
@@ -38,8 +45,14 @@ class MyQueAndAns(var context: Context, var messageList:List<QuestionAndAns>):
 
             date=itemView.findViewById(R.id.myqueimge) as ImageView
             imageView=itemView.findViewById(R.id.checkAns) as ImageView
+            itemView.setOnClickListener(this)
 
 
+
+
+        }
+        override fun onClick(v: View?) {
+            listener!!.onItemClick(v!!, adapterPosition)
 
         }
 
@@ -51,7 +64,7 @@ class MyQueAndAns(var context: Context, var messageList:List<QuestionAndAns>):
 
 
     @SuppressLint("ResourceAsColor")
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, @SuppressLint("RecyclerView") position: Int) {
         Glide.with(context).load(messageList[position].questionurl).diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).skipMemoryCache(true).into(holder.date!!)
 
       //  holder.date!!.text=messageList[position].date
@@ -64,6 +77,24 @@ class MyQueAndAns(var context: Context, var messageList:List<QuestionAndAns>):
 
 
         }
+
+
+        holder.setListener(object : IRecListener {
+            override fun onItemClick(view: View, pos: Int) {
+
+                if (messageList[position].ansUrl!!.length!=0){
+                    EventBus.getDefault().post(DoubtsClicked(true, messageList[pos]))
+
+
+                }
+                else{
+                    EventBus.getDefault().post(DoubtsClicked(false, messageList[pos]))
+
+                }
+
+            }
+
+        })
 
 
     }

@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toTopOf="@id/myasking"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/crad_bakk"
+        android:background="@color/white"
         android:orientation="vertical"
         android:id="@+id/myll"
 
@@ -34,20 +34,32 @@
             android:layout_width="match_parent"
             android:layout_weight="3"
 
-            android:background="#DAD6D6"
+            android:background="#CAC6C6"
             android:layout_marginBottom="@dimen/_5sdp"
             android:layout_height="0dp">
-
-
-            <ImageView
-                android:id="@+id/getimage"
-                android:layout_margin="@dimen/_10sdp"
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:id="@+id/pick_IMAGE"
+                android:src="@drawable/askkk"
+                app:riv_corner_radius="@dimen/_6sdp"
+                android:layout_margin="@dimen/_10sdp"
+                >
 
 
-                android:scaleType="fitXY"
-                android:src="@drawable/myplus" />
+            </com.makeramen.roundedimageview.RoundedImageView>
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/getimage"-->
+<!--                -->
+<!--                android:layout_margin="@dimen/_10sdp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+
+
+<!--                -->
+<!--                android:src="@drawable/askkk" />-->
 
         </LinearLayout>
 
@@ -56,24 +68,25 @@
                     android:layout_weight="2"
 
 
-            android:background="#D3CFCF"
+            android:background="@color/white"
             android:layout_marginBottom="@dimen/_5sdp"
 
             android:layout_height="0dp">
+
                     <EditText
+                        android:id="@+id/optionText"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="Add Optional Information Here...."
-                        android:textColor="@color/black"
-                        android:gravity="start"
-                        android:background="#D3CFCF"
-                        android:textColorHint="#090909"
-                        android:lineSpacingExtra="@dimen/_6sdp"
-
-                        android:textSize="@dimen/_16ssp"
-                        android:id="@+id/optionText"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@color/white"
                         android:fontFamily="@font/ubuntu_bold"
-                        android:layout_margin="@dimen/_10sdp"/>
+                        android:gravity="start"
+                        android:hint="Add Optional Information Here...."
+
+                        android:lineSpacingExtra="@dimen/_6sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#090909"
+                        android:textSize="@dimen/_16ssp" />
 
                 </LinearLayout>
 
@@ -106,7 +119,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myll"
         android:id="@+id/myasking"
-        android:background="@color/white"
+        android:background="#D4D5D6"
 
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">

@@ -56,6 +56,10 @@
             app:destination="@id/testYearRep" />
         <action
             android:id="@+id/action_launchFragment_to_doubtsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:destination="@id/doubtsFragment" />
     </fragment>
     <fragment
@@ -279,6 +283,10 @@
         tools:layout="@layout/doubts_fragment" >
         <action
             android:id="@+id/action_doubtsFragment_to_askNewDoubtsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:destination="@id/askNewDoubtsFragment" />
     </fragment>
     <fragment
@@ -290,8 +298,12 @@
         tools:layout="@layout/ask_new_doubts_fragment" >
         <action
             android:id="@+id/action_askNewDoubtsFragment_to_doubtsFragment"
-            app:popUpTo="@id/askNewDoubtsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpToInclusive="true"
+            app:popUpTo="@id/doubtsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:destination="@id/doubtsFragment" />
     </fragment>
 </navigation>
