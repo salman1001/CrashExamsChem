@@ -133,8 +133,11 @@ class DoubtsFragment : Fragment() {
     fun DoubtsClicked(event: DoubtsClicked){
         if (event.issuccess){
 
-         //   val action= ChapterFragmentDirections.actionChapterFragmentToTopicsInChap(event.catModel.name.toString(), "TopicsInChap")
-         //   navController!!.navigate(action)
+            val action= DoubtsFragmentDirections.actionDoubtsFragmentToShowAnsDoubts(event.doubts)
+            navController!!.navigate(action)
+        }
+        else{
+            Toast.makeText(requireContext(),"Not Answered Yet",Toast.LENGTH_LONG).show();
         }
 
     }

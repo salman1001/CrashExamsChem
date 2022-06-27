@@ -288,6 +288,13 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:destination="@id/askNewDoubtsFragment" />
+        <action
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            android:id="@+id/action_doubtsFragment_to_showAnsDoubts"
+            app:destination="@id/showAnsDoubts" />
     </fragment>
     <fragment
         android:id="@+id/askNewDoubtsFragment"
@@ -305,5 +312,13 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:destination="@id/doubtsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showAnsDoubts"
+        android:name="com.crashExams365.chemistry.Fragments.showAnsDoubts.ShowAnsDoubts"
+        android:label="ShowAnsDoubts" >
+        <argument
+            android:name="doubtsAnsModel"
+            app:argType="com.crashExams365.chemistry.Fragments.Doubts.QuestionAndAns" />
     </fragment>
 </navigation>
